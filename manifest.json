@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Polymarket Live Follow",
+  "description": "Automatically follows Polymarket live markets by clicking the Go to live market button after a short delay.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://polymarket.com/*",
+        "https://www.polymarket.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
